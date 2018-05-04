@@ -1,0 +1,9 @@
+.League {
+  margin-top: 1em;
+  display: flex;
+  text-align: center;
+}
+
+.League > * {
+  margin: auto;
+}
