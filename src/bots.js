@@ -1,21 +1,12 @@
-const botNames = [
-  'copyCatBot',
-  'customBot',
-  'dynamiteBot',
-  'paperBot',
-  'randomBot',
-  'rockBot',
-  'scissorsBot',
-  'strategyBot',
-  'tieBreakerBot',
-  'waterBombBot'
-]
+import path from 'path';
 
-const bots = botNames.map(name => {
-  const bot = require(`./bots/${name}`)
-  bot.name = name;
+const context = require.context('./bots', true, /\.js$/);
+const bots = context.keys().map(file => {
+  const bot = context(file);
+  bot.name = path.basename(file, '.js');
   bot.wins = 0;
   bot.scoreDifference = 0;
   return bot;
 });
+
 export default bots;

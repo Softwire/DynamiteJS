@@ -15,7 +15,7 @@ class Bot {
     }
 
     const lastRoundWasDraw = (lastRound.myMove === lastRound.opponentMove);
-    if (lastRoundWasDraw && this.dynamiteUsed++ < 100) {
+    if (lastRoundWasDraw && (this.dynamiteUsed++ < 100)) {
       return 'D';
     }
 
