@@ -1,9 +1,9 @@
 .League {
   margin-top: 1em;
   display: flex;
-  text-align: center;
+  flex-direction: column;
 }
 
 .League > * {
-  margin: auto;
+  margin: 10px auto;
 }

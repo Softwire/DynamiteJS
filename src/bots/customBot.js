@@ -19,6 +19,7 @@ class Bot {
    *  makeMove MUST return one of 'R', 'P', 'S', 'D', or 'W'
    */
   makeMove(gamestate) {
+    return 'P';
     // TODO: Implement a bot following a strategy of your choosing.
   }
 }

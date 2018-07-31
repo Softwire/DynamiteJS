@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import gameRunner from './gameRunner';
 import './League.css';
+import Game from './Game';
+import LeagueTable from './LeagueTable';
 
 class League extends Component {
   constructor() {
@@ -14,11 +16,10 @@ class League extends Component {
   }
 
   runLeague(bots) {
-    const games = {};
+    const games = [];
 
     for (let p1 = 0; p1 < bots.length; p1++) {
       const playerOne = bots[p1];
-      games[playerOne.name] = {};
       for (let p2 = p1 + 1; p2 < bots.length; p2++) {
         const playerTwo = bots[p2];
         console.log(`=== ${playerOne.name} vs. ${playerTwo.name} ===`);
@@ -37,43 +38,24 @@ class League extends Component {
           console.log(`${winner.name} beat ${loser.name}: ${winnerScore} - ${loserScore}`);
         }
         console.log("");
-        games[playerOne.name][playerTwo.name] = rounds;
+        games.push({ playerOne, playerTwo, rounds });
       }
     }
 
-    this.setState({ rankings: bots });
+    this.setState({ bots, games });
   }
 
   render() {
-    const { rankings } = this.state;
-    const rows = (rankings || [])
-      .sort((p1, p2) => (p2.wins - p1.wins) || (p2.scoreDifference - p1.scoreDifference))
-      .map((bot, i) => {
-        return (
-          <tr key={bot.name}>
-            <td>{i + 1}.</td>
-            <td>{bot.name}</td>
-            <td>{bot.wins}</td>
-            <td>{bot.scoreDifference}</td>
-          </tr>
-        );
-      });
+    const { bots, games } = this.state;
     return (
       <div className="League">
-        {rankings ?
-          <table className="League-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Bot</th>
-                <th>Wins</th>
-                <th>+/-</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows}
-            </tbody>
-          </table> :
+        {bots ?
+          (<React.Fragment>
+            <h2>Results</h2>
+            <LeagueTable bots={bots} />
+            <h2>Games</h2>
+            {games.map(game => <Game game={game} />)}
+          </React.Fragment>) :
           <p>Running league matches…</p>
         }
       </div>

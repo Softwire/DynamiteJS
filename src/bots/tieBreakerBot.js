@@ -1,8 +1,4 @@
 class Bot {
-  constructor() {
-    this.dynamiteUsed = 0;
-  }
-
   makeRandomMove() {
     return ['R', 'P', 'S'][Math.floor(Math.random() * 3)];
   }
@@ -14,8 +10,9 @@ class Bot {
       return this.makeRandomMove();
     }
 
+    const dynamiteUsed = rounds.filter(r => r.myMove === 'D').length;
     const lastRoundWasDraw = (lastRound.myMove === lastRound.opponentMove);
-    if (lastRoundWasDraw && (this.dynamiteUsed++ < 100)) {
+    if (lastRoundWasDraw && (dynamiteUsed < 100)) {
       return 'D';
     }
 

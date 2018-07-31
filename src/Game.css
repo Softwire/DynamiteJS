@@ -1,0 +1,10 @@
+button.expand-toggle {
+  background-color: black;
+  color: white;
+  height: 20px;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 1rem;
+  font-weight: bold;
+}
