@@ -32,7 +32,7 @@ You have been given a web page that runs and shows results for a Rock-Paper-Scis
 1. Each bot plays each other bot in a game of Rock-Paper-Scissors-Waterballoon-Dynamite.
   * Rounds are played one by one, in a race to 1000 points.
   * A point is scored when a bot wins a single round.
-  * If the bots draw, neither player scores and the point available for that round is carried over to the next round (i.e. after one draw the next round is worth two points, after two draws three points, etc.).
+  * If the bots draw, neither player scores and the point available for that round is carried over to the next round (i.e. after one draw the next round is worth two points, after two draws three points, etc.). If there are 1000 consecutive draws, the game ends there.
   * If any bot returns an invalid move (i.e. not one of the above five options) the other bot immediately wins the game.
   * Players are limited to using **100 dynamite** per game.
 2. Once all the games have been played, the page displays the results.
