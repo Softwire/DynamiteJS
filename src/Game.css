@@ -8,3 +8,27 @@ button.expand-toggle {
   margin-left: 1rem;
   font-weight: bold;
 }
+
+table.game-table {
+  border-collapse: collapse;
+}
+
+table.game-table,
+table.game-table th,
+table.game-table td {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+table.game-table .game-round-winner {
+  background: lightgreen;
+  font-weight: bold;
+}
+
+table.game-table .game-round-draw {
+  background: bisque;
+}
+
+table.game-table .game-round-loser {
+  background: lightcoral;
+}
