@@ -22,7 +22,7 @@ class gameRunner {
     while (playerOneScore < WINNING_SCORE && playerTwoScore < WINNING_SCORE && currentDrawStreak < WINNING_SCORE) {
       const playerOneMove = this.getNextMove(playerOne, playerOneRounds);
       const playerTwoMove = this.getNextMove(playerTwo, playerTwoRounds);
-      rounds.push({ p1: playerOneMove, p2: playerTwoMove });
+
       playerOneRounds.push({ myMove: playerOneMove, opponentMove: playerTwoMove });
       playerTwoRounds.push({ myMove: playerTwoMove, opponentMove: playerOneMove });
 
@@ -75,6 +75,13 @@ class gameRunner {
           this.unexpectedError();
           break;
       }
+
+      rounds.push({
+        p1: playerOneMove,
+        p2: playerTwoMove,
+        points: pointsForWin,
+        wasWinningMove: move => (move === playerOneMove && result === PLAYER_ONE_WIN) || (move === playerTwoMove && result === PLAYER_TWO_WIN)
+      });
     }
     return { playerOneScore, playerTwoScore, rounds };
   }
