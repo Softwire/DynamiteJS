@@ -23,7 +23,7 @@ export default class Game extends Component {
       const playerTwoWon = wasWinningMove(p2);
       const wasDraw = !playerOneWon && !playerTwoWon;
 
-      const getPlayerClass = playerWon => playerWon && 'game-round-winner' || wasDraw && 'game-round-draw' || 'game-round-loser';
+      const getPlayerClass = playerWon => (playerWon && 'game-round-winner') || (wasDraw && 'game-round-draw') || 'game-round-loser';
 
       return (
         <tr key={`${playerOne.name}-${playerTwo.name}-${i}`}>
