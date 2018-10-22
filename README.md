@@ -24,9 +24,9 @@ These add the following rules:
 
 The above describes a single round, games will consist of multiple rounds, with scores being accumulated through the rounds.
 
-## The Task
+## Overview
 
-Your task is to write a bot to play Rock-Paper-Scissors-Waterballoon-Dynamite.
+Your task will be to write a bot to play Rock-Paper-Scissors-Waterballoon-Dynamite.
 
 You have been given a web page that runs and shows results for a Rock-Paper-Scissors-Waterballoon-Dynamite league. The league works as follows:
 1. Each bot plays each other bot in a game of Rock-Paper-Scissors-Waterballoon-Dynamite.
@@ -110,12 +110,12 @@ Each bot must have the method `makeMove(gamestate)` which defines which move it 
 
 `module.exports = new Bot()` ensures that this bot is included in the league.
 
-### Writing a bot #1
-One of the bots is called `randomBot.js`. This bot should pick a move completely at random, choosing between Rock, Paper and Scissors only.
+## Task #1
+One of the bots can be found in `randomBot.js`. Can you fill in the code for `randomBot.js` so that it randomly selects a move between Rock, Paper and Scissors? Leave out Waterballoon and Dynamite for now.
 
-Implement `randomBot.js`.
+If you're a bit lost or don't know how to get started, just ask one of our volunteers to help you out.
 
 Extension: extend your bot to also choose Dynamite at random. Remember it is limited to using up to 100 dynamite per game.
 
-### Writing a bot #2
-Implement `customBot.js`. This can use any strategy of your choosing/designing.
+## Task #2
+Now fill in the code for `customBot.js`. This can use any strategy of your choosing/designing.
