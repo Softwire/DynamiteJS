@@ -30,14 +30,14 @@ Your task will be to write a bot to play Rock-Paper-Scissors-Waterballoon-Dynami
 
 You have been given a web page that runs and shows results for a Rock-Paper-Scissors-Waterballoon-Dynamite league. The league works as follows:
 1. Each bot plays each other bot in a game of Rock-Paper-Scissors-Waterballoon-Dynamite.
-  * Rounds are played one by one, in a race to 1000 points.
-  * A point is scored when a bot wins a single round.
-  * If the bots draw, neither player scores and the point available for that round is carried over to the next round (i.e. after one draw the next round is worth two points, after two draws three points, etc.). If there are 1000 consecutive draws, the game ends there.
-  * If any bot returns an invalid move (i.e. not one of the above five options) the other bot immediately wins the game.
-  * Players are limited to using **100 dynamite** per game.
+    * Rounds are played one by one, in a race to 1000 points.
+    * A point is scored when a bot wins a single round.
+    * If the bots draw, neither player scores and the point available for that round is carried over to the next round (i.e. after one draw the next round is worth two points, after two draws three points, etc.). If there are 1000 consecutive draws, the game ends there.
+    * If any bot returns an invalid move (i.e. not one of the above five options) the other bot immediately wins the game.
+    * Players are limited to using **100 dynamite** per game.
 2. Once all the games have been played, the page displays the results.
-  * Bots are ranked based on number of wins, then by score difference as a tie-breaker.
-  * A breakdown of every move each bot made in each game is also given in case you wish to analyse how a game played out.
+    * Bots are ranked based on number of wins, then by score difference as a tie-breaker.
+    * A breakdown of every move each bot made in each game is also given in case you wish to analyse how a game played out.
 
 ## Setup
 
@@ -52,21 +52,21 @@ You will need to install:
 
 One you have completed the downloads, open Git Bash (if you installed Git for Windows) or your shell/command line on Linux/Mac and do the following:
 1. Move to a directory where you want to save the code.
-  * Use the command `cd path/to/directory`.
-  * If you want to create a new folder, you can use the command `mkdir <directory name>`.
+    * Use the command `cd path/to/directory`.
+    * If you want to create a new folder, you can use the command `mkdir <directory name>`.
 2. The code is all stored on Github. To get a copy on your machine use the command `git clone https://github.com/Softwire/DynamiteJS.git`.
-  * You should now have a folder in that directory called `DynamiteJS`. This contains all the code you will need for the activity.
+    * You should now have a folder in that directory called `DynamiteJS`. This contains all the code you will need for the activity.
 3. Move into the new directory by using `cd DynamiteJS`.
 4. Install the packages that the project relies on by using the command `npm install`.
 5. Run the site! Use the command `npm run start`.
-  * You should get a message in your command line that includes the following text:
-  ```
-  Starting the development server...
-  Compiled successfully!
-  You can now view dynamite in the browser.
-  Local: http://localhost:3000/
-  ```
-  * Your web browser should burst into life and go to the site. If it doesn't, go to the site address given in your command line, i.e. the http://localhost:3000 above.
+    * You should get a message in your command line that includes the following text:
+    ```
+    Starting the development server...
+    Compiled successfully!
+    You can now view dynamite in the browser.
+    Local: http://localhost:3000/
+    ```
+    * Your web browser should burst into life and go to the site. If it doesn't, go to the site address given in your command line, i.e. the http://localhost:3000 above.
 
 You should see the results from your first league of Rock-Paper-Scissors-Waterballoon-Dynamite! Reloading the page will re-play the league and give you the new results each time.
 
@@ -115,7 +115,7 @@ One of the bots can be found in `randomBot.js`. Can you fill in the code for `ra
 
 If you're a bit lost or don't know how to get started, just ask one of our volunteers to help you out.
 
-Extension: extend your bot to also choose Dynamite at random. Remember it is limited to using up to 100 dynamite per game.
+Extension: extend your bot to also choose Dynamite at random. Remember it is limited to using up to 100 Dynamite per game.
 
 ## Task #2
 Now fill in the code for `customBot.js`. This can use any strategy of your choosing/designing.
