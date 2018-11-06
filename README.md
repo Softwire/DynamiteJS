@@ -42,12 +42,13 @@ You have been given a web page that runs and shows results for a Rock-Paper-Scis
 ## Setup
 
 You will need to install:
-* NodeJS (with npm included)
-  * You can find this at https://nodejs.org/en/download/.
+* NodeJS with npm included
+  * You can find this at https://nodejs.org/en/download/. The default settings should be fine - including npm package manager and "add to PATH"
 * Git
-  * _For Windows users_: it is recommended that you install Git for Windows https://gitforwindows.org/. Make sure you include 'Git Bash' if it asks.
-  * _Other users_: find your downloads at https://git-scm.com/downloads.
-* A text editor to look at/ write your code.
+  * You will only need this to run one command `git clone` to download the code for the bot runner, so any basic Git client will do. For example:
+    * _For Windows users_: Git for Windows https://gitforwindows.org/. Make sure you include 'Git Bash' if it asks.
+    * _Other users_: find your downloads at https://git-scm.com/downloads.
+* A text editor to look at / write your code.
   * If you're not sure what to use, Visual Studio Code or Atom are good options.
 
 One you have completed the downloads, open Git Bash (if you installed Git for Windows) or your shell/command line on Linux/Mac and do the following:
