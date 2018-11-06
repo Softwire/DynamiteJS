@@ -112,9 +112,9 @@ Each bot must have the method `makeMove(gamestate)` which defines which move it 
 `module.exports = new Bot()` ensures that this bot is included in the league.
 
 ## Task #1
-One of the bots can be found in `randomBot.js`. Can you fill in the code for `randomBot.js` so that it randomly selects a move between Rock, Paper and Scissors? Leave out Waterballoon and Dynamite for now.
+Can you fill in the code for `randomBot.js` so that it randomly selects a move between Rock, Paper and Scissors? Leave out Waterballoon and Dynamite for now.
 
-If you're a bit lost or don't know how to get started, just ask one of our volunteers to help you out.
+If you're a bit lost or don't know how to get started, just ask one of our volunteers to help you out. Also, look at the other bots for clues, starting with `paperBot.js` and `rockBot.js`.  The other bots already have a random move generator, so give it a try yourself first before looking at them!
 
 Extension: extend your bot to also choose Dynamite at random. Remember it is limited to using up to 100 Dynamite per game.
 
