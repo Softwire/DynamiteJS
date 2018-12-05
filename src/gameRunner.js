@@ -77,8 +77,8 @@ class gameRunner {
       }
 
       rounds.push({
-        p1: playerOneMove,
-        p2: playerTwoMove,
+        p1: { move: playerOneMove, score: playerOneScore },
+        p2: { move: playerTwoMove, score: playerTwoScore },
         points: pointsForWin,
         wasWinningMove: move => (move === playerOneMove && result === PLAYER_ONE_WIN) || (move === playerTwoMove && result === PLAYER_TWO_WIN)
       });
