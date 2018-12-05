@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import './Game.css';
 
+const emoji = {
+  'R': '🗿',
+  'P': '📜',
+  'S': '✂️',
+  'D': '🧨',
+  'W': '🌊'
+}
+
 export default class Game extends Component {
   constructor() {
     super();
@@ -28,8 +36,8 @@ export default class Game extends Component {
       return (
         <tr key={`${playerOne.name}-${playerTwo.name}-${i}`}>
           <td>{i + 1}</td>
-          <td className={getPlayerClass(playerOneWon)}>{p1.move}</td>
-          <td className={getPlayerClass(playerTwoWon)}>{p2.move}</td>
+          <td className={getPlayerClass(playerOneWon)}>{p1.move} {emoji[p1.move]}</td>
+          <td className={getPlayerClass(playerTwoWon)}>{p2.move} {emoji[p2.move]}</td>
           <td style={roundScoreStyle}>{p1.score}</td>
           <td style={roundScoreStyle}>{p2.score}</td>
           <td>{!wasDraw && points > 1 && `+${points - 1} (${points - 1} draw${points > 2 ? 's' : ''})`}</td>
