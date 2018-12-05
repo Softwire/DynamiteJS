@@ -54,7 +54,7 @@ class League extends Component {
             <h2>Results</h2>
             <LeagueTable bots={bots} />
             <h2>Games</h2>
-            {games.map(game => <Game game={game} />)}
+            {games.map(game => <Game key={`${game.playerOne.name}-${game.playerTwo.name}`} game={game} />)}
           </React.Fragment>) :
           <p>Running league matches…</p>
         }

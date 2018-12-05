@@ -42,7 +42,7 @@ export default class Game extends Component {
     const { playerOne, playerTwo } = game;
 
     return (
-      <div key={`${playerOne.name}-${playerTwo.name}`}>
+      <div>
         <h3>
           {playerOne.name} vs. {playerTwo.name}
           <button className="expand-toggle" onClick={() => this.toggleExpanded()}>
@@ -51,13 +51,17 @@ export default class Game extends Component {
         </h3>
         {expanded &&
           <table className="game-table">
-            <tr>
-              <th>Round</th>
-              <th>{playerOne.name}</th>
-              <th>{playerTwo.name}</th>
-              <th>Points</th>
-            </tr>
-            {this.renderRows(game)}
+            <thead>
+              <tr>
+                <th>Round</th>
+                <th>{playerOne.name}</th>
+                <th>{playerTwo.name}</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderRows(game)}
+            </tbody>
           </table>
         }
       </div>
